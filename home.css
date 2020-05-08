@@ -1,0 +1,342 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #f7f7f7;
+    font-family: open sans;
+}
+body li{
+    list-style-type: none;
+}
+body a{
+    text-decoration: none;
+}
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.body-pointer{
+    overflow: hidden;
+}
+body::-webkit-scrollbar{
+    width: 8px;
+    background: #aaa;
+}
+body::-webkit-scrollbar-button{
+    display: none;
+}
+body::-webkit-scrollbar-thumb{
+    background: #333;
+    border-radius: 5px;
+}
+
+.nav-section{
+    width: 0;
+    transition: 0.8s ease;
+    height: 100vh;
+    background: #f7f7f7;
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding-left: 250px;
+    transform: translateY(-100%);
+    border-radius: 0 500px 500px 0;
+}
+.nav-section span{
+    width: 1px;
+    height: 160px;
+    background: #333;
+    margin: 0 30px;
+}
+.nav-section ul li a{
+    color: #333;
+    font-family: open sans;
+    letter-spacing: 3px;
+}
+.nav-section ul li{
+    transition: 0.3s ease;
+}
+.nav-section ul li:hover{
+    transform: translateX(10px);
+}
+.nav-section p{
+    font-family: open sans;
+    font-size: 38px;
+    letter-spacing: 8px;
+}
+.nav{
+    position: fixed;
+    top: 30px;
+    z-index: 11;
+    left: 30px;
+    cursor: pointer;
+}
+.nav div{
+    background: #888;
+    height: 1px;
+    box-shadow: 0 1px 10px 1px rgba(0,0,0,0.2);
+    mix-blend-mode: difference;
+}
+.nav .d1{
+    width: 50px;
+}
+.nav .d2{
+    width: 30px;
+    margin: 10px 0;
+}
+.nav .d3{
+    width: 40px;
+}
+
+.header{
+    width: 100%;
+    height: 750px;
+    background-image: url("./assets/back.jpg");
+    background-size: cover;
+    padding-top: 10rem;
+}
+.inside-header{
+    width: 360px;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+}
+.header h1{
+    font-size: 100px;
+    letter-spacing: 30px;
+    font-weight: 100;
+    margin-right: -30px;
+}
+.hr{
+    width: 100%;
+    height: 1px;
+    background: #333;
+    margin-bottom: 18px;
+}
+.header p{
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.inside-header div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.inside-header a{
+    padding: 5px 12px;
+    width: 48%;
+    color: #555;
+    border: 1px solid #333;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+.inside-header a:hover{
+    background: #333;
+    color: #ddd;
+}
+.kimochi{
+    width: 360px;
+    background: #fff;
+    border-radius: 100px;
+    box-shadow: 0 1px 5px 3px rgba(0,0,0,0.2);
+    padding: 10px;
+    margin: auto;
+    display: flex;
+}
+.img-home{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.img-home img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.2);
+}
+.data-home{
+    margin-left: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.data-home p{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.data-home a{
+    color: #f7f7f7;
+    width: 100%;
+    background: #333;
+    border-radius: 20px;
+    padding: 0;
+    transition: 0.3s ease;
+}
+.data-home a:hover{
+    padding: 5px;   
+}
+
+.shop{
+    width: 1200px;
+    margin: 40px auto;
+    position: relative;
+}
+.type{
+    width: 300px;
+    height: 40px;
+    margin: auto;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+    border-radius: 20px;
+}
+.type select{
+    width: 300px;
+    height: inherit;
+    text-align: center;
+    line-height: 40px;
+    transition: 0.3s ease;
+    border-radius: 50px;
+    outline: none;
+    padding: 0 20px;
+    background: #333;
+    color: #f7f7f7;
+}
+.course{
+    border-radius: 20px 0 0 20px;
+    color: #333;
+}
+.product{
+    color: #333;
+    border-radius: 0 20px 20px 0;
+}
+.active-type{
+    color: #f7f7f7;
+    background: #333;
+}
+.product-nav{
+    margin: 40px 0;
+    width: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+}
+.product-nav ul{
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+.product-nav ul li{
+    position: relative;
+}
+.product-nav ul li input{
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+    opacity: 0;
+    outline: none;
+}
+.act-product{
+    border-bottom: 1px solid #333;
+}
+.sort{
+    width: 120px;
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+    position: relative;
+}
+.sort button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #333;
+    transition: 0.3s ease;
+}
+.sort button:hover{
+    color: #f7f7f7;
+    background: #333;
+}
+
+.hasil-filter{
+    width: 1200px;
+    margin: 30px auto 50px auto;
+    letter-spacing: 3px;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.place{
+    width: 1200px;
+    position: relative;
+    margin: auto;
+    justify-content: space-between;
+}
+.place img{
+    width: 300px;
+    height: 160px;
+    object-fit: cover;
+}
+.items{
+    width: 300px;
+    height: 370px;
+    box-shadow: 0 0 10px 5px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+.items:nth-child(3n-1){
+    margin: 0 145px;
+}
+.items span{
+    font-size: 22px;
+}
+.items p{
+    line-height: 20px;
+    color: #555;
+    word-break: break-all;
+    font-size: 14px;
+}
+.inner-desc{
+    padding: 12px;
+}
+.inner-desc hr{
+    margin: 10px 0;
+}
+.lala{
+    position: absolute;
+    width: 260px;
+    left: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lala a{
+    width: 100px;
+    margin-left: 20px;
+    padding: 5px 0;
+    text-align: center;
+    border: 2px solid #333;
+    transition: 0.5s ease;
+    color: #333;
+}
+.lala a:hover{
+    background: #333;
+    color: #f7f7f7;
+}
+.items input{
+    position: absolute;
+    visibility: hidden;
+    display: none;
+}

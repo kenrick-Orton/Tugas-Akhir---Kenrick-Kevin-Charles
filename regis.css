@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: open sans;
+    outline: none;
+}
+h1{
+    font-weight: 100;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.con{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+.left-side{
+    width: 50%;
+    height: 100vh;
+    background-image: url("./assets/wp4244262-fanny-skylark-wallpapers.jpg");
+    background-size: cover;
+    clip-path: polygon(0 0 , 70% 0 , 100% 100% , 0 100%);
+    position: relative;
+}
+.left-side::before{
+    position: absolute;
+    content: '';
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: inherit;
+}
+.desc{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+.desc h1{
+    font-size: 50px;
+    color: #f7f7f7;
+}
+.desc p{
+    font-size: 16px;
+    width: 80%;
+    margin-top: 20px;
+    color: #aaa;
+}
+.right-side{
+    width: 50%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.inner{
+    width: 400px;
+    padding: 10px;
+}
+.lala,.lala2{
+    position: relative;
+    /* background: red; */
+    margin-bottom: 40px;
+    height: 40px;
+}
+.lala2{
+    margin-bottom: 50px;
+}
+.hide{
+    right: 0;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    bottom: 0;
+}
+.inner{
+    position: relative;
+    width: 400px;
+}
+.inner input{
+    width: 100%;
+    padding: 20px 10px 10px 10px;
+    border: none;
+    border-bottom: 1px solid #333;
+    font-size: 16px;
+    outline: none;
+    position: absolute;
+    z-index: 2;
+}
+.inner span{
+    margin-top: 10px;
+    font-family: sans-serif;
+    color: red;
+    transition: 0.2s ease;
+    z-index: 1;
+    position: absolute;
+    transition: 0.3s ease;
+    bottom: 0;
+    transform: translateY(0);
+    font-size: 12px;
+    font-style: italic;
+}
+.inner button{
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background: transparent;
+    color: #333;
+    text-transform: uppercase;
+    border-radius: 50px;
+    margin-top: 50px;
+    cursor: pointer ;
+    transition: 0.3s ease;
+    border: 1px solid #333;
+    font-size: 16px;
+}
+.inner button:hover{
+    background: #333;
+    color: #f7f7f7;
+}
+::placeholder{
+    transition: 0.3s ease;
+}
+.inner input:focus::placeholder{
+    transform: translate(-10%,-100%) scale(0.8);
+}
+.inner a{
+    color: #aaa;
+    font-size: 12px;
+    text-decoration: none;
+    float: right;
+}
+
+.sc{
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    display: grid;
+    place-items: center;
+    transform: translateY(-100%);
+    transition: 0.8s ease;
+}
+.inside-sc{
+    width: 360px;
+    padding: 20px;
+    background: #f7f7f7;
+    text-align: center;
+}
+.act-ok{
+    transform: translateY(0);
+}
